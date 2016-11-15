@@ -21,15 +21,18 @@ class App extends Component {
   }
 
   componentDidMount() {
+    //part I
   }
 
   fetchRelatedData() {
     this.fetchData('/research-common/api/v1/proposal-types/')
       .then((data) => this.setState({proposalTypes : keyBy(data, 'code')}));
+    //part II
   }
 
   fetchProposals = () => {
     let url = '/instprop/api/v1/institutional-proposals/';
+    //part III
     this.fetchData(url).then((data) => this.setState({proposals : data}));
   }
 
